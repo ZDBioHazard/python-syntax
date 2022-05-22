@@ -51,6 +51,7 @@ if s:Enabled('g:python_highlight_all')
     call s:EnableByDefault('g:python_print_as_function')
     call s:EnableByDefault('g:python_highlight_func_calls')
     call s:EnableByDefault('g:python_highlight_class_vars')
+    call s:EnableByDefault('g:python_highlight_args')
     call s:EnableByDefault('g:python_highlight_operators')
 endif
 
@@ -78,6 +79,9 @@ syn keyword pythonStatement     def nextgroup=pythonFunction skipwhite
 syn keyword pythonStatement     class nextgroup=pythonClass skipwhite
 if s:Enabled('g:python_highlight_class_vars')
     syn keyword pythonClassVar    self cls mcs
+endif
+if s:Enabled('g:python_highlight_args')
+    syn keyword pythonClassVar    args kwargs
 endif
 syn keyword pythonRepeat        for while
 syn keyword pythonConditional   if elif else
@@ -520,6 +524,7 @@ if v:version >= 508 || !exists('did_python_syn_inits')
     HiLink pythonExClass          Structure
     HiLink pythonClass            Structure
     HiLink pythonClassVar         Identifier
+    HiLink pythonArgs             Identifier
 
     delcommand HiLink
 endif

@@ -72,6 +72,7 @@ let g:python_highlight_all = 1
 | `g:python_highlight_space_errors`             | Highlight trailing spaces                                      | `0`     |
 | `g:python_highlight_doctests`                 | Highlight doc-tests                                            | `0`     |
 | `g:python_highlight_func_calls`               | Highlight functions calls                                      | `0`     |
+| `g:python_highlight_args`                     | Highlight common argument names `args` and `kwargs`            | `0`     |
 | `g:python_highlight_class_vars`               | Highlight class variables `self`, `cls`, and `mcs`             | `0`     |
 | `g:python_highlight_operators`                | Highlight all operators                                        | `0`     |
 | `g:python_highlight_all`                      | Enable all highlight options above, except for previously set. | `0`     |
