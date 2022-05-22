@@ -490,7 +490,11 @@ if v:version >= 508 || !exists('did_python_syn_inits')
     HiLink pythonStrFormat        Special
     HiLink pythonStrTemplate      Special
 
-    HiLink pythonDocString        Comment
+    if s:Enabled('g:python_highlight_docstrings_as_comments')
+        HiLink pythonDocString        Comment
+    else
+        HiLink pythonDocString        String
+    endif
 
     HiLink pythonDocTest          Special
     HiLink pythonDocTest2         Special
