@@ -52,6 +52,7 @@ if s:Enabled('g:python_highlight_all')
     call s:EnableByDefault('g:python_highlight_func_calls')
     call s:EnableByDefault('g:python_highlight_class_vars')
     call s:EnableByDefault('g:python_highlight_args')
+    call s:EnableByDefault('g:python_highlight_braces')
     call s:EnableByDefault('g:python_highlight_operators')
 endif
 
@@ -112,6 +113,13 @@ else
     syn cluster pythonExpression contains=pythonStatement,pythonRepeat,pythonConditional,pythonOperator,pythonNumber,pythonHexNumber,pythonOctNumber,pythonBinNumber,pythonFloat,pythonString,pythonFString,pythonRawString,pythonRawFString,pythonBytes,pythonBoolean,pythonNone,pythonSingleton,pythonBuiltinObj,pythonBuiltinFunc,pythonBuiltinType,pythonClassVar
 endif
 
+
+"
+" Braces
+"
+if s:Enabled('g:python_highlight_braces')
+    syn match pythonBrace '[()\[\]{}]'
+endif
 
 "
 " Operators
@@ -451,6 +459,7 @@ if v:version >= 508 || !exists('did_python_syn_inits')
     HiLink pythonConditional      Conditional
     HiLink pythonRepeat           Repeat
     HiLink pythonException        Exception
+    HiLink pythonBrace            Brace
     HiLink pythonOperator         Operator
 
     HiLink pythonDecorator        Define

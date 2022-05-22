@@ -59,6 +59,9 @@ following command to your `~/.config/nvim/init.vim` or `~/.vimrc`: >
 `g:python_highlight_builtins` (default `0`)
     Highlight builtin objects, types, and functions
 
+`g:python_highlight_braces` (default `0`)
+    Highlight braces, brackets, and parens only
+
 `g:python_highlight_builtin_objs` (default `0`)
     Highlight builtin objects only
 
